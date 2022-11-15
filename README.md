@@ -10,3 +10,4 @@ az eredmények folyamatosan érkeznek:
         újat hozzá lehet adni
         a meglévő diákoknál meglehet nézni átment-e a megyei versenyre
         a legtöbb pontszámű diákot megkell jutalmazni
+ 
