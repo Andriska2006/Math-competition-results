@@ -9,9 +9,16 @@ def menu():
     system('cls')
     print('0 - Kilépés')
     print('1 - Új eredmény hozzáadása')
-    print('2 - Legjobb eredmény')
+    print('2 - Eredmények')
+    print('3 - Eredmény törlése')
+    return input('Kérem válasszon: ')
+
+def menu1():
+    system('cls')
+    print('0 - Vissza a főmenübe')
+    print('1 - Legjobb eredmény')
+    print('2 - Legrosszabb eredmény')
     print('3 - Összes eredmény')
-    print('4 - Eredmény törlése')
     return input('Kérem válasszon: ')
 
 def loadResults():
@@ -45,7 +52,7 @@ def printAllResults():
     input('Tovább (Enter)...')
 
 def deleteResults():
-    system('cls')
+    system('cls') 
     print('Eredmény törlése')
     student = input(' A törlendő diák neve: ')
     if student in mathcompetition:
@@ -59,7 +66,7 @@ def saveAllToFile():
     file = open(filename, 'w', encoding='utf-8')
 
     file.write(cimsor)
-    for student,result in mathcompetition.items():
+    for student,result in mathcompetition.items():   
         file.write(f'{student};{result}\n')
     
     file.close()
@@ -67,8 +74,17 @@ def saveAllToFile():
 def legnagyobb():
     maxvalue = 0
     maxkey = ''
-    for key,value in mathcompetition.items:
+    for key,value in mathcompetition.items():
         if value > maxvalue:
             maxvalue = value
             maxkey = key
     return maxkey
+    
+def legkisebb():
+    minvalue = 999999
+    minkey = ''
+    for key,value in mathcompetition.items():
+        if value < minvalue:
+            minvalue = value
+            minkey = key
+    return minkey

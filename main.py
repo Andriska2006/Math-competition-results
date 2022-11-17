@@ -7,8 +7,22 @@ while choice != '0':
     if choice == '1':
         addNewResults()
     elif choice == '2':
-        legnagyobb()
+        choice1 = ''
+        while choice1 != '0':
+            choice1 = menu1()
+            if choice1 == '1':
+                print('A legtöbb pontot elért diák neve: ',legnagyobb())
+                input('Tovább (Enter)...')
+            elif choice1 == '2':
+                print('A legtöbb pontot elért diák neve: ',legkisebb())
+                input('Tovább (Enter)...')
+            elif choice1 == '3':
+                printAllResults()
+                input('Tovább (Enter)...')
     elif choice == '3':
-        printAllResults()
-    elif choice == '4':
         deleteResults()
+
+
+
+
+
