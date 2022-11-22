@@ -10,7 +10,7 @@ def menu():
     print('0 - Kilépés')
     print('1 - Új eredmény hozzáadása')
     print('2 - Eredmények')
-    print('3 - Eredmény törlése')
+    print('3 - Eredmény törlése')   
     return input('Kérem válasszon: ')
 
 def menu1():

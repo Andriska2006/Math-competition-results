@@ -15,13 +15,13 @@ while choice != '0':
                 input('Tovább (Enter)...')
             elif choice1 == '2':
                 print('A legtöbb pontot elért diák neve: ',legkisebb())
-                input('Tovább (Enter)...')
+                input()
             elif choice1 == '3':
                 printAllResults()
-                input('Tovább (Enter)...')
+                
     elif choice == '3':
-        deleteResults()
-
+        deleteResults() 
+ 
 
 
 
