@@ -2,7 +2,9 @@ from data import *
 from os import system
 
 filename = 'math.csv'
-cimsor = ''                  
+cimsor = ''       
+studentsfile = 'students.txt'        
+resultsfile = 'result.txt'        
 
 
 def menu():
@@ -11,6 +13,7 @@ def menu():
     print('1 - Új eredmény hozzáadása')
     print('2 - Eredmények')
     print('3 - Eredmény törlése')   
+    print('4 - Résztvevő keresése')
     return input('Kérem válasszon: ')
 
 def menu1():
@@ -81,10 +84,16 @@ def legnagyobb():
     return maxkey
     
 def legkisebb():
-    minvalue = 999999
+    minvalue = 1000
     minkey = ''
     for key,value in mathcompetition.items():
         if value < minvalue:
             minvalue = value
             minkey = key
     return minkey
+
+def searchStudents(needle):
+    for name,point in mathcompetition.items():
+        if needle.upper() == name.upper():
+            return name
+    return False    
